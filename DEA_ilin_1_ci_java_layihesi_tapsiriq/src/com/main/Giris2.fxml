@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.GirisController2">
+   <children>
+      <ListView fx:id="list1" layoutX="40.0" layoutY="146.0" prefHeight="65.0" prefWidth="200.0" />
+      <Button fx:id="basla1" layoutX="74.0" layoutY="54.0" mnemonicParsing="false" onAction="#basla1Basildi" prefHeight="65.0" prefWidth="150.0" text="Basla 1">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <TextField layoutX="526.0" layoutY="41.0" />
+      <Button fx:id="basla2" layoutX="304.0" layoutY="54.0" mnemonicParsing="false" onAction="#basla2Basildi" prefHeight="65.0" prefWidth="150.0" text="Basla 2">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <ListView fx:id="list2" layoutX="285.0" layoutY="144.0" prefHeight="47.0" prefWidth="200.0" />
+      <CheckBox layoutX="188.0" layoutY="119.0" mnemonicParsing="false" text="CheckBox" />
+      <ComboBox layoutX="320.0" layoutY="231.0" prefWidth="150.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="526.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" />
+      <PasswordField layoutX="91.0" layoutY="244.0" />
+      <RadioButton layoutX="212.0" layoutY="179.0" mnemonicParsing="false" text="RadioButton" />
+      <ProgressIndicator fx:id="proses" layoutX="515.0" layoutY="87.0" prefHeight="140.0" prefWidth="133.0" progress="0.0" rotate="3.4" />
+      <ProgressBar fx:id="proses2" layoutX="137.0" layoutY="309.0" prefHeight="18.0" prefWidth="467.0" progress="0.0" />
+      <Slider fx:id="slayder" layoutX="67.0" layoutY="327.0" onDragDone="#surusdurulur" onDragOver="#surusdurulur" onMouseDragOver="#surusdurulur" onScroll="#surusdurulur" orientation="VERTICAL" prefHeight="182.0" prefWidth="14.0" />
+      <Separator layoutX="182.0" layoutY="391.0" prefHeight="55.0" prefWidth="475.0" />
+      <MenuBar layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="283.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fayl">
+            <items>
+              <MenuItem fx:id="bagla" mnemonicParsing="false" onAction="#baglaBasildi" text="Bagla" />
+                  <MenuItem mnemonicParsing="false" text="Ac" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Unspecified Menu">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

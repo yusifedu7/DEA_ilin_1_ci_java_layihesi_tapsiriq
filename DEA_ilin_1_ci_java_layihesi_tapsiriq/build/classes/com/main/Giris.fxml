@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.GirisController">
+   <children>
+       
+            <TextField fx:id="adTF" layoutX="173.0" layoutY="14.0" prefHeight="25.0" prefWidth="255.0" promptText="Burada ad yazılır" />
+            <ComboBox fx:id="kateqoriyalar" layoutX="14.0" layoutY="14.0" prefWidth="150.0" promptText="Kateqoriya seç" />
+            <TableView fx:id="tapsiriqlarCedveli" layoutX="4.0" layoutY="137.0" onMousePressed="#tapsiriqlarCedveliSecilir" prefHeight="417.0" prefWidth="732.0">
+               <columns>
+                  <TableColumn fx:id="idSutun" prefWidth="45.0" text="İD" />
+                  <TableColumn fx:id="adSutun" prefWidth="206.0" text="Ad" />
+                  <TableColumn fx:id="tarixSutun" prefWidth="109.0" text="Tarix" />
+                  <TableColumn fx:id="gunSutun" prefWidth="55.0" text="Gün" />
+                   <TableColumn fx:id="qalangunSutun" prefWidth="68.0" text="Qalan Gün" />
+                  <TableColumn fx:id="kateqoriyaSutun" prefWidth="117.0" text="Kateqoriya" />
+                  <TableColumn fx:id="statusSutun" prefWidth="174.0" text="Status" />
+               </columns>
+            </TableView>
+            <RadioButton fx:id="hamisiRB" layoutX="13.0" layoutY="98.0" mnemonicParsing="false" onAction="#statusFiltirEdilir" text="Hamısı">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="statuslar" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="hellOlanlarRB" layoutX="100.0" layoutY="98.0" mnemonicParsing="false" onAction="#statusFiltirEdilir" text="Həll olanlar" toggleGroup="$statuslar">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="hellOlmayanlarRB" layoutX="224.0" layoutY="98.0" mnemonicParsing="false" onAction="#statusFiltirEdilir" text="Həll olmayanlar" toggleGroup="$statuslar">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <Button fx:id="yeniKateqoriyaButton" layoutX="593.0" layoutY="93.0" mnemonicParsing="false" onAction="#yeniKateqoriyaBasildi" text="Yeni kateqoriya" textFill="#f50000">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="gunTF" layoutX="437.0" layoutY="14.0" prefHeight="25.0" prefWidth="116.0" promptText="Burada gün yazılır" />
+            <Button fx:id="yeniTapsiriqButton" layoutX="563.0" layoutY="14.0" mnemonicParsing="false" onAction="#yeniTapsiriqBasildi" text="Yeni tapşırıq qeydiyyatı" textFill="#2000bf">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+            <TextField fx:id="axtarisTF" layoutX="413.0" layoutY="95.0" onKeyReleased="#axtarisEdilir" promptText="Buradan axtarış et" />
+            <Button fx:id="hellEdildiButton" layoutX="15.0" layoutY="54.0" mnemonicParsing="false" onAction="#hellEdildiBasildi" text="Həll edildi" textFill="#12dd1d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="silButton" layoutX="225.0" layoutY="54.0" mnemonicParsing="false" onAction="#silBasildi" prefHeight="31.0" prefWidth="83.0" text="Sil" textFill="#8114db">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="hamisiSecimi" layoutX="134.0" layoutY="60.0" mnemonicParsing="false" text="Hamısını" textFill="#e40000">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </CheckBox>
+      <Button fx:id="redakteButton" layoutX="563.0" layoutY="48.0" mnemonicParsing="false" onAction="#redakteBasildi" prefHeight="25.0" prefWidth="149.0" text="Seçiləni redaktə et" textFill="#2000bf">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="setirSayi" layoutX="15.0" layoutY="569.0" text="Sətir sayı - 0" textFill="#0966ed">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="212.0" layoutY="569.0" text="Xəbərdarlıqlar : " textFill="#eb0909" fx:id="xeberdarliqlarLabel">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+          
+   </children>
+</AnchorPane>
